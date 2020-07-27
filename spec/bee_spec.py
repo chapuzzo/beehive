@@ -20,10 +20,6 @@ with describe("environment") as self:
             (7, 3),
         ]
 
-        import sys
-
-        print(sys.version_info)
-
         positions = [Position(*coords) for coords in flowers]
         env = Environment(flowers=positions)
 
