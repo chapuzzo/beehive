@@ -4,7 +4,7 @@ from expects import expect, equal, be_false, be_true, have_property
 from position import Position
 from environment import Environment
 
-with describe("environment") as self:
+with describe(Environment) as self:
     with it("has default size"):
         expect(Environment()).to(have_property("width", 10))
         expect(Environment()).to(have_property("height", 10))
