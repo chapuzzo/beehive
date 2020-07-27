@@ -14,10 +14,17 @@ class Bee:
         return "<bee {}>".format(self.__dict__)
 
     def move(self, direction, amount) -> bool:
-        delta = Position(**{direction: amount})
+        try:
+            delta = Position(**{direction: amount})
+        except TypeError as e:
+            if "unexpected keyword argument" in str(e):
+                return False
+            raise e
+
         new_position = self.position + delta
 
         if self.env is None:
+            self.position = new_position
             return True
 
         if self.env.check(new_position):

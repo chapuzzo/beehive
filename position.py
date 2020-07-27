@@ -13,3 +13,8 @@ class Position:
 
     def __add__(self, other):
         return self.__class__(self.x + other.x, self.y + other.y)
+
+    def __eq__(self, other):
+        return all(
+            getattr(self, axis) == getattr(other, axis) for axis in self.__slots__
+        )
