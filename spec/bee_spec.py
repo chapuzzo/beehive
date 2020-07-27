@@ -6,8 +6,8 @@ from environment import Environment
 
 with describe("environment") as self:
     with it("has default size"):
-        expect(Environment()).to(have_property('width', 10))
-        expect(Environment()).to(have_property('height', 10))
+        expect(Environment()).to(have_property("width", 10))
+        expect(Environment()).to(have_property("height", 10))
 
     with it("checks positions within given size"):
         expect(Environment(5, 5).check(Position(0, 0))).to(be_true)
@@ -21,6 +21,7 @@ with describe("environment") as self:
         ]
 
         import sys
+
         print(sys.version_info)
 
         positions = [Position(*coords) for coords in flowers]
