@@ -113,10 +113,10 @@
         },
         "mamba": {
             "hashes": [
-                "sha256:5fdb77be323dc4c9723f0752ff73d1753a94f3b60bb12ba555370fb3d37feb2e"
+                "sha256:f976735949bc9a8731cc0876aaea2720949bd3d1554b0e94004c91a4f61abecb"
             ],
             "index": "pypi",
-            "version": "==0.11.0"
+            "version": "==0.11.1"
         },
         "pathspec": {
             "hashes": [
